@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ticc
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: FreeBSD
+Description: UNKNOWN
+Keywords: graph inference,latent variables
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Requires: numpy (>=1.11)
+Requires: scipy (>=0.16.1,>=1.0)
+Requires: sklearn (>=0.17)
+Requires: six
+Description-Content-Type: text/markdown

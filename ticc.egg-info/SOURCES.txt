@@ -1,4 +1,5 @@
 README.md
+setup.cfg
 setup.py
 ticc/TICC_helper.py
 ticc/TICC_solver.py

@@ -205,13 +205,13 @@ class TICC(BaseEstimator):
                                 = complete_D_train[point_to_move, :][
                                   (self.window_size - 1) * time_series_col_size:self.window_size * time_series_col_size]
 
-            for cluster_num in range(self.number_of_clusters):
-                if self.verbose > 1:
+            if self.verbose > 1:
+                for cluster_num in range(self.number_of_clusters):
                     print(
                         "length of cluster #", cluster_num, "-------->",
                         sum([x == cluster_num for x in clustered_points]))
 
-            self.write_plot(clustered_points, str_NULL, training_indices)
+                self.write_plot(clustered_points, str_NULL, training_indices)
 
             # TEST SETS STUFF
             # LLE + swtiching_penalty
@@ -260,7 +260,9 @@ class TICC(BaseEstimator):
                 clustered_points, train_cluster_inverse, empirical_covariances)
             return clustered_points, train_cluster_inverse, bic
 
-        return clustered_points, train_cluster_inverse
+        self.precision_ = train_cluster_inverse
+        self.labels_ = clustered_points
+        return self
 
     def compute_f_score(
             self, matching_EM, matching_GMM, matching_Kmeans,

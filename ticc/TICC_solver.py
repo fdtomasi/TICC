@@ -67,7 +67,7 @@ class TICC(BaseEstimator):
 
         ############
         # The basic folder to be created
-        str_NULL = self.prepare_out_directory()
+        # str_NULL = self.prepare_out_directory()
 
         # Train test split
         training_indices = getTrainTestSplit(
@@ -79,6 +79,7 @@ class TICC(BaseEstimator):
         complete_D_train = self.stack_training_data(
             times_series_arr, time_series_col_size, num_train_points,
             training_indices)
+        self.complete_D_train = complete_D_train
 
         # Initialization
         # Gaussian Mixture
@@ -211,7 +212,7 @@ class TICC(BaseEstimator):
                         "length of cluster #", cluster_num, "-------->",
                         sum([x == cluster_num for x in clustered_points]))
 
-                self.write_plot(clustered_points, str_NULL, training_indices)
+            # self.write_plot(clustered_points, str_NULL, training_indices)
 
             # TEST SETS STUFF
             # LLE + swtiching_penalty
